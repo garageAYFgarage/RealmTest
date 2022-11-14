@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 protocol TableViewViewModelProtocol {
-    var dataSource: [String] { get set }
+
     var numberOfRows: Int { get }
     
     func getCellTitle(at indexPath: IndexPath) -> String
@@ -18,7 +18,8 @@ protocol TableViewViewModelProtocol {
 
 final class TableViewViewModel: TableViewViewModelProtocol {
     
-    var dataSource = ["One", "Two", "Three"]
+    private let dataSource: [String] = []
+    
     var numberOfRows: Int {
         dataSource.count
     }
@@ -30,5 +31,3 @@ final class TableViewViewModel: TableViewViewModelProtocol {
         "\(dataSource[indexPath.row])"
     }
 }
-
-// +

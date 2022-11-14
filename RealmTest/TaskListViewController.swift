@@ -10,10 +10,7 @@ import RealmSwift
 
 class TaskListViewController: UITableViewController {
     
-    
-        var taskLists: Results<TaskList>!
-    
-    
+    var taskLists: Results<TaskList>! // need unforce !
     let label = UILabel()
     
     override func viewDidLoad() {
@@ -52,21 +49,16 @@ class TaskListViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        taskLists.count
-        return 0
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskList" , for: indexPath) //as? TaskListCell // <-
-        
+//    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskListCell" , for: indexPath)
+//
 //        let taskList = taskLists[indexPath.row]
 //        cell.textLabel?.text = taskList.name
 //        cell.detailTextLabel?.text = "\(taskList.tasks.count)"
-        
-        return cell
-    }
-    
-    
-    
-   
+//
+//        return cell
+//    }
 }
